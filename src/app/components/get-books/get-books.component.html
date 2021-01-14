@@ -1,0 +1,21 @@
+<app-header [childMessage]="bag"></app-header>
+<div class="flexrow">
+    <mat-card *ngFor=" let book of booksArray" class="grid-item">
+        <mat-card-content class="cover">
+            <img src={{book.bookImage}} alt="image error">
+        </mat-card-content>
+        <mat-card-content class="detail">
+            <mat-card-title>{{book.bookName}}</mat-card-title>
+            <mat-card-subtitle>by {{book.author}}</mat-card-subtitle>
+            <span><b>Rs {{book.price}}/-</b>
+            </span>
+        </mat-card-content>
+        <div>
+            <button type="submit" class="butn" *ngIf="book.addedToCart" mat-raised-button (click)="addcart(book)">ADDED TO BAG</button>
+        </div>
+        <div class="butt" *ngIf='!book.addedToCart'>
+            <button class="but"  mat-raised-button (click)="addcart(book)">Add to Cart</button>
+            <button class="wbut" mat-raised-button>wishlist</button>
+        </div>
+    </mat-card>
+</div>

@@ -1,0 +1,40 @@
+<div>
+  <div fxFlex="10%"></div>
+  <div fxFlex="80%">
+    <mat-card>
+      <mat-card-title>My Wishlist </mat-card-title>
+      <hr>
+      <div>
+        <mat-card-content>
+          <div fxLayout="row wrap" fxLayoutGap="2%">
+            <span>
+              <!-- <img mat-panel-image src="{{book[0].image}}"> -->
+              <img mat-panel-image src="../../../assets/books/WiseAndOtherwise.webp">
+            </span>
+            <span>
+              <mat-card-title>
+                <!-- {{book[0].title}} -->
+                Wise And Otherwise
+              </mat-card-title>
+              <mat-card-subtitle>
+                <!-- by {{book[0].author}} -->
+                by Sudha Murty
+              </mat-card-subtitle>
+              <mat-card-content> <b>
+                  <!-- Rs {{book[0].price}}  -->
+                  Rs.250/
+                  <del>
+                    <!-- {{book.price+100}} -->
+                  </del>
+                </b></mat-card-content>
+              <button mat-stroked-button style="background-color: #5d5bff; color: white;">
+                Remove
+              </button>
+            </span>
+          </div>
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
+  <div fxFlex="10%"></div>
+</div>

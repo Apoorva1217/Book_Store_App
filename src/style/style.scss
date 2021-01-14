@@ -1,0 +1,20 @@
+@import "variable.scss";
+
+.form-field {
+  width: 49%;
+  padding-right: 1%;
+}
+
+.name-field {
+  width: $size;
+}
+
+
+
+.signin {
+  text-decoration: none;
+  color: $blue;
+  font-size: 30;
+  cursor: pointer;
+}
+

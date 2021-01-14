@@ -1,0 +1,166 @@
+<app-header [childMessage]="bag"></app-header>
+<mat-accordion>
+    <div class="main" *ngFor="let book of books; let i=index">
+        <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle (opened)="setStep(0)">
+            <mat-expansion-panel-header>
+                <mat-panel-title>My Cart ({{book.quantityToBuy}})</mat-panel-title>
+            </mat-expansion-panel-header>
+            <div>
+                <div>
+                    <mat-card-content class="detail">
+                        <div class="product-img-div">
+                            <div>
+                                <mat-card-content class="cover">
+                                    <img src={{book.product.bookImage}}>
+                                </mat-card-content>
+                            </div>
+                            <div class="product-div">
+                                <mat-card-title>{{book.product.bookName}}</mat-card-title><br>
+                                <mat-card-subtitle>by {{book.product.author}}</mat-card-subtitle><br>
+                                <span><b>Rs {{book.product.price*book.quantityToBuy}}</b></span>
+                                <div>
+                                    <button mat-icon-button *ngIf="book.isValid" (click)="decreaseCartQuantity(book,1)">
+                                        <mat-icon>remove_circle_outline</mat-icon>
+                                    </button>
+                                    <button mat-icon-button *ngIf="!book.isValid"
+                                        (click)="decreaseCartQuantity(book,1)">
+                                        <mat-icon>remove_circle_outline</mat-icon>
+                                    </button>
+                                    <input type="text" class="numInput" value="{{book.quantityToBuy}}" id="number">
+                                    <button mat-icon-button *ngIf="book.isValid" (click)="increaseCartQuantity(book)">
+                                        <mat-icon>add_circle_outline</mat-icon>
+                                    </button>
+                                    <button mat-icon-button *ngIf="!book.isValid" (click)="increaseCartQuantity(book)">
+                                        <mat-icon>add_circle_outline</mat-icon>
+                                    </button>
+                                    <button mat-stroked-button type="submit" class="removeButton"
+                                        (click)="removeItem(book)">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-card-content>
+                </div>
+            </div>
+            <mat-action-row>
+                <button mat-button color="primary" (click)="nextStep()">Place order</button>
+            </mat-action-row>
+        </mat-expansion-panel>
+    </div>
+</mat-accordion>
+<mat-accordion>
+    <div class="main">
+        <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)">
+            <mat-expansion-panel-header>
+                <mat-panel-title>Customer Details</mat-panel-title>
+            </mat-expansion-panel-header>
+            <form (ngSubmit)="customerDetails()">
+                <div class="mat-div">
+                    <div class="form-div">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Full Name</mat-label>
+                            <input matInput type="text" [formControl]="FullName" autocomplete="off" required>
+                            <mat-error *ngIf="FullName.invalid">
+                                {{getFullNameErrorMsg()}}
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Phone number</mat-label>
+                            <input matInput type="text" [formControl]="Phone" autocomplete="off" required>
+                            <mat-error *ngIf="Phone.invalid">
+                                {{getPhoneNumberErrorMsg()}}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-div">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Pin Code</mat-label>
+                            <input matInput type="text" [formControl]="PinCode" autocomplete="off" required>
+                            <mat-error *ngIf="PinCode.invalid">
+                                {{getPincodeErrorMsg()}}
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Locality</mat-label>
+                            <input matInput type="text" [formControl]="Locality" autocomplete="off" required>
+                            <mat-error *ngIf="Locality.invalid">
+                                {{getLocalityErrorMsg()}}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-div">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Address</mat-label>
+                            <input matInput type="text" [formControl]="Address" autocomplete="off" required>
+                            <mat-error *ngIf="Address.invalid">
+                                {{getAddressErrorMsg()}}
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput type="text" [formControl]="Email" autocomplete="off" required>
+                            <mat-error *ngIf="Email.invalid">
+                                {{getEmailErrorMsg()}}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-div">
+                        <mat-form-field appearance="outline">
+                            <mat-label>City/Town</mat-label>
+                            <input matInput type="text" [formControl]="City" autocomplete="off" required>
+                            <mat-error *ngIf="City.invalid">
+                                {{getCityErrorMsg()}}
+                            </mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="outline">
+                            <mat-label>Landmark</mat-label>
+                            <input matInput type="text" [formControl]="Landmark" autocomplete="off" required>
+                            <mat-error *ngIf="Landmark.invalid">
+                                {{getLandmarkErrorMsg()}}
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div>
+                        <mat-radio-group aria-label="Type">
+                            <div class="mat-radio">
+                                <mat-radio-button value="Home">Home</mat-radio-button>
+                                <mat-radio-button value="Work">Work</mat-radio-button>
+                                <mat-radio-button value="Other">Other</mat-radio-button>
+                            </div>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <mat-action-row>
+                    <button mat-button color="primary" (click)="nextStep()">Continue</button>
+                </mat-action-row>
+            </form>
+        </mat-expansion-panel>
+    </div>
+</mat-accordion>
+<mat-accordion> 
+    <div class="main">
+        <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)">
+            <mat-expansion-panel-header>
+                <mat-panel-title>Order</mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="product-img-div" *ngFor="let book of books">
+                <div>
+                    <mat-card-content class="cover">
+                        <img src="{{book.product.bookImage}}">
+                    </mat-card-content>
+                </div>
+                <div class="product-div">
+                    <mat-card-content class="detail">
+                        <div>
+                            <mat-card-title>{{book.product.bookName}}</mat-card-title><br>
+                            <mat-card-subtitle>by {{book.product.author}}</mat-card-subtitle><br>
+                            <span><b>Rs {{book.product.price*book.quantityToBuy}}/-</b></span>
+                        </div>
+                    </mat-card-content>
+                </div>
+            </div>
+            <div class="bottom">
+                <button mat-raised-button color="primary" (click)="checkout()">CheckOut</button>
+            </div>
+        </mat-expansion-panel>
+    </div>
+</mat-accordion>

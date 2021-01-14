@@ -1,0 +1,190 @@
+.main {
+  display: inline-grid;
+  padding: 10px;
+}
+.grid-item {
+  max-width: 275px;
+  width: auto;
+  display: grid;
+  border:0.7px solid rgba(0,0,0,0.24);
+}
+mat-card-title {
+  white-space: nowrap;
+  width: 235px;
+  height: 20%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+img {
+  width: 100px;
+  height: 150px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  margin-left: 30%;
+}
+.mat-card-image:first-child {
+  margin-top: 0;
+}
+.cover {
+  background-color: rgba(128, 128, 128, 0.534);
+}
+.mat-card {
+  padding: 0;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+.mat-card-content {
+  background-color: white;
+}
+.toolbar {
+  flex: 1 1 auto;
+}
+@media screen and (min-width: 992px) {
+  .mainbody {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+  }
+}
+.title {
+  padding-top: 30px;
+  font-size: x-large;
+}
+.card {
+  width: 240px;
+  padding: 10px;
+  margin: 10px;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.but {
+  background-color: #8f2b2f;
+  width: 100px;
+}
+.butt {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 8px !important;
+}
+.butn{
+  background-color:#3371B5;
+  width: -webkit-fill-available;
+  margin: 0px 5px 3px 5px;
+}
+.detail{
+  height: fit-content;
+}
+.main {
+  display: inline-grid;
+  padding: 10px;
+}
+.grid-item {
+  max-width: 275px;
+  width: auto;
+  display: grid;
+  border: 0.7px solid rgba(0, 0, 0, 0.24);
+}
+mat-card-title {
+  white-space: nowrap;
+  width: 235px;
+  height: 23%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+img {
+  width: 100px;
+  height: 150px;
+  margin-top: 10px;
+  padding: 2px;
+  margin-bottom: 0;
+  margin-left: 30%;
+}
+.mat-card-image:first-child {
+  margin-top: 0;
+}
+.cover {
+  background-color: rgba(128, 128, 128, 0.534);
+}
+.mat-card {
+  padding: 0;
+  margin-top: 2%;
+}
+.details {
+  padding: 16px;
+}
+mat-card-content {
+  padding: 16px;
+}
+.toolbar {
+  flex: 1 1 auto;
+}
+.matCart{
+width: 250px;
+display: flex;
+flex-wrap: wrap;
+height: auto;
+margin-left: 2px;
+z-index: 1;
+}
+.discription{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}
+.bookHeader{
+font-size: medium;
+font-weight: bold;
+margin-top: 10px;
+}
+.bookDecrip{
+color: rbg(172,169,169);
+font-size: xx-large;
+}
+@media screen and (min-width: 992px) {
+  .mainbody {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+  }
+}
+.title {
+  padding-top: 30px;
+  font-size: x-large;
+}
+.card {
+  width: 240px;
+  padding: 10px;
+  margin: 10px;
+}
+.flexrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 10%;
+}
+.but {
+  background-color: #8f2b2f;
+  width: 100px;
+  margin-bottom: 3%;
+  color: white;
+}
+.wbut {
+  background-color: aliceblue;
+  width: 100px;
+  margin-bottom: 3%;
+}
+.butt {
+  display: flex;
+  justify-content: space-around;
+}
+.getbookworks {
+  margin-top: 40%;
+  margin-left: 10%;
+}
+.cover {
+  background-color: rgba(128, 128, 128, 0.534);
+}

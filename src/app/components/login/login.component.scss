@@ -1,0 +1,50 @@
+@import "../../../style/style.scss";
+$size:80%;
+
+.login-form-field {
+  width: 100%;
+  padding-right: 1px;
+}
+.card {
+  width: 350px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.main{
+  margin-left: auto;
+  margin-top: 10%;
+}
+.SignIn{
+  margin-top: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color:  #8f2b2f;
+}
+.header {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.bk{
+  font-size: 17px;
+  font-weight: 300;
+  text-align: center;
+}
+.loginbtn{
+  margin-left: 80%;
+}
+.header {
+  background-color: #8f2b2f;
+  color: white;
+  font-size: x-large;
+  font-family: sans-serif;
+}
+.loginfooter {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2e1d1e;
+  color: white;
+  text-align: center;
+  font-size: x-large;
+  margin-top: 9.4%;
+}

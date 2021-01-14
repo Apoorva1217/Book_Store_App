@@ -1,0 +1,38 @@
+<div class="main">
+  <div fxFlex="10%"></div>
+  <div fxFlex="80%">
+    <div fxLayoutAlign="center center">
+      <span>
+        <div class="img"><img mat-card-image class="dat" src="../../../assets/image/order.png"></div>
+        <div class="msg" *ngFor=" let book of books">
+          <p>Hurray!!! Your order is confirmed. The order id is {{book.product_id}}. Save the order id for further
+            communication..</p>
+        </div><br>
+        <div class="contactus">
+          <div class="card">
+            <mat-card class="email">
+              <mat-card-title class="cardtitle">Email us</mat-card-title>
+              <mat-card-content class="cardcontent">bookstore@gmail.com</mat-card-content>
+            </mat-card>
+          </div>
+          <div class="card">
+            <mat-card class="email">
+              <mat-card-title class="cardtitle">Contact us</mat-card-title>
+              <mat-card-content class="cardcontent">+91 9876543210</mat-card-content>
+            </mat-card>
+          </div>
+          <div class="card">
+            <mat-card class="email">
+              <mat-card-title class="cardtitle">Address</mat-card-title>
+              <mat-card-content class="cardcontent">Mumbai, Maharashtra</mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </span> 
+    </div>
+  </div>
+  <div fxFlex="10%"></div>
+</div>
+<div class="bottom">
+  <button mat-raised-button color="primary" (click)="navigateBook()">Continue Shopping</button>
+</div>

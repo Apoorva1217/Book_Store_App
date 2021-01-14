@@ -1,0 +1,84 @@
+.example-icon {
+  padding: 0 14px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.header {
+  background-color: #8f2b2f;
+  color: white;
+  font-size: x-large;
+}
+.data {
+  margin-left: 40%;
+}
+.toolbar {
+  flex: 1 1 auto;
+  margin-right: 10%;
+}
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  width: 100%;
+}
+.mat-icon-button {
+  padding-top: 1%;
+}
+@media screen and (min-width: 990px) {
+  .header {
+    background-color: #8f2b2f;
+    color: white;
+    font-size: x-large;
+  }
+  .header .dat {
+    margin-left: 10%;
+  }
+  .icon {
+    margin-right: 10%;
+  }
+}
+.title {
+  padding-top: 10px;
+}
+.material-icons {
+  padding-bottom: 75%;
+}
+.detail {
+  padding: 10px;
+  width: 200px;
+}
+.input-card {
+  width: 40vw;
+  height: 6vh;
+  margin-left: 4vw;
+  transition: none !important;
+  box-shadow: none !important;
+  background-color: #f1f3f4;
+}
+.input-feild {
+  width: 40.6vw;
+  height: 4vh;
+  padding-bottom: 10px !important;
+}
+.searchbtn {
+  height: 5vh;
+  margin-left: 50%;
+}
+.input-feild input {
+  width: 80%;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: lighter;
+  background-color: #f1f3f4;
+}
+mat-card {
+  padding: 0px;
+}
+.bookstore {
+  cursor: pointer;
+}
